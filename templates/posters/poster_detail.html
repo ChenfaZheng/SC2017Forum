@@ -1,0 +1,18 @@
+{% extends '_base.html' %}
+
+{% block title %}{{ poster.title }}{% endblock title %}
+
+{% block content %}
+    <div class="d-flex align-items-center p-3 my-3 text-white-50 bg-purple rounded shadow-sm">
+        <div class="lh-100">
+        <h2 class="mb-0 text-white lh-100">
+            <a href="{{ poster.get_absolute_url }}">{{ poster.title }}</a>
+        </h2>
+        </div>
+    </div>
+
+    <div class="my-3 p-3 bg-white rounded shadow-sm">
+        <img class="poster" src="{{ poster.get_image_url }}" alt="{{ poster.title }}">
+    </div>
+
+{% endblock content %}

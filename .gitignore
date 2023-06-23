@@ -1,0 +1,10 @@
+.env
+db.sqlite3
+config/settings.py.debug
+staticfiles
+
+*/__pycache__
+cert
+
+*.backup
+*/migrations

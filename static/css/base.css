@@ -1,0 +1,31 @@
+/* h1 {
+    color: red;
+} */
+
+.biglogo {
+    height: 300px;
+    width: auto;
+}
+
+.jumbotron#home {
+    background-image: url("../images/srj-banner2.jpg");
+    background-size: cover;
+}
+
+.jumbotron#report_list {
+    background-image: url("../images/moon-star.png");
+    background-size: cover;
+}
+
+.jumbotron#poster_list {
+    background-image: url("../images/xinglong-banner.jpg");
+    background-size: cover;
+}
+
+p#homecontent {
+    -webkit-text-stroke: 0.005em navy;
+}
+
+h1#hometitle {
+    -webkit-text-stroke: 0.005em navy;
+}

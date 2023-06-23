@@ -1,0 +1,32 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[[source]]
+url = "https://pypi.tuna.tsinghua.edu.cn/simple"
+verify_ssl = true
+name = "pypitunatsinghuaedu"
+
+[[source]]
+url = "https://pypi.tuna.tsinghua.edu.cn/simple"
+verify_ssl = true
+name = "pypitunatsinghuaedu"
+
+[packages]
+django = "~=4.2"
+psycopg2-binary = "*"
+django-crispy-forms = "*"
+tqdm = {version = "*", index = "pypitunatsinghuaedu"}
+environs = {extras = ["django"], version = "*", index = "pypitunatsinghuaedu"}
+django-allauth = {version = "==0.43.0", index = "pypitunatsinghuaedu"}
+pillow = "*"
+whitenoise = "*"
+gunicorn = "*"
+guardian = "*"
+crispy-bootstrap4 = "*"
+
+[dev-packages]
+
+[requires]
+python_version = "3.10"
