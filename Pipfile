@@ -25,6 +25,7 @@ whitenoise = "*"
 gunicorn = "*"
 guardian = "*"
 crispy-bootstrap4 = "*"
+django-environ = "*"
 
 [dev-packages]
 

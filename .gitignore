@@ -8,3 +8,5 @@ cert
 
 *.backup
 */migrations
+
+media/

@@ -19,7 +19,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 import environ
 
 env = environ.Env(
-    DEBUG=(bool, False) # default casting
+    DEBUG=(bool, 'True') == 'True' # default casting
 )
 environ.Env.read_env(BASE_DIR / '.env')
 
@@ -32,7 +32,7 @@ SECRET_KEY = env(
 )
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = env('DEBUG', default=False)
+DEBUG = env('DEBUG', default='False') == 'True'
 
 ALLOWED_HOSTS = env('ALLOWED_HOSTS', default=['127.0.0.1', '0.0.0.0'])
 
@@ -177,7 +177,7 @@ EMAIL_HOST = env('EMAIL_HOST', default=None)
 EMAIL_HOST_USER = env('EMAIL_HOST_USER', default=None)
 EMAIL_HOST_PASSWORD = env('EMAIL_HOST_PASSWORD', default=None)
 EMAIL_PORT = env('EMAIL_PORT', default=None)
-EMAIL_USE_TLS = env('EMAIL_USE_TLS', default=None)
+EMAIL_USE_TLS = env('EMAIL_USE_TLS', default='True') == 'True'
 
 DEFAULT_FROM_EMAIL = env('DEFAULT_FROM_EMAIL', default='example@email.com')
 
@@ -194,9 +194,9 @@ MEDIA_ROOT = str(BASE_DIR.joinpath('media'))
 
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
-SECURE_SSL_REDIRECT = env('SECURE_SSL_REDIRECT', default=False)
+SECURE_SSL_REDIRECT = env('SECURE_SSL_REDIRECT', default='False') == 'True'
 SECURE_HSTS_SECONDS = env('SECURE_HSTS_SECONDS', default=0)
-SECURE_HSTS_INCLUDE_SUBDOMAINS = env('SECURE_HSTS_INCLUDE_SUBDOMAINS', default=False)
-SECURE_HSTS_PRELOAD = env('SECURE_HSTS_PRELOAD', default=False)
-SESSION_COOKIE_SECURE = env('SESSION_COOKIE_SECURE', default=False)
-CSRF_COOKIE_SECURE = env('CSRF_COOKIE_SECURE', default=False)
+SECURE_HSTS_INCLUDE_SUBDOMAINS = env('SECURE_HSTS_INCLUDE_SUBDOMAINS', default='False') == 'True'
+SECURE_HSTS_PRELOAD = env('SECURE_HSTS_PRELOAD', default='False') == 'True'
+SESSION_COOKIE_SECURE = env('SESSION_COOKIE_SECURE', default='False') == 'True'
+CSRF_COOKIE_SECURE = env('CSRF_COOKIE_SECURE', default='False') == 'True'
